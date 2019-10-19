@@ -33,13 +33,13 @@ const assets = {
 
 randomTextures = []
 
-location = ''
+location_ = 'assets/deseuri/';
 
 var textures = {};
 
 for(material in assets){
   for(i=1;i<=assets[material];i++){
-
+    randomTextures.push(PIXI.Texture.from(location_+material+i+'.png'));
   }
 }
 
@@ -57,7 +57,7 @@ const texture = PIXI.Texture.from('assets/bottle2small.png');
 
 // Create a 5x5 grid of bunnies
 for (let i = 0; i < 1; i++) {
-  const bunny = new PIXI.Sprite(texture);
+  const bunny = new PIXI.Sprite(randomTextures[Math.floor(Math.random() * randomTextures.length)]);
   bunny.anchor.set(0.5);
   bunny.x = (i % 5) * 40;
   bunny.y = Math.floor(i / 5) * 40;
