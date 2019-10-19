@@ -1,5 +1,48 @@
 var P;
 
+const points = {
+  aluminum: 20,
+  coffeecup: -5,
+  glass: 18,
+  organics: 23,
+  paper: 17,
+  plastic: 15,
+  plasticbag: 1,
+  refuse: -20,
+  ruinedpaper: 20,
+  styrofoam: -5,
+  tetrapack: -11,
+  tin: 19
+}
+
+
+const assets = {
+  aluminum:20,
+  coffeecup:6,
+  glass:18,
+  organics:23,
+  paper:17,
+  plastic:15,
+  plasticbag:1,
+  refuse:32,
+  ruinedpaper:20,
+  styrofoam:5,
+  tetrapack:11,
+  tin:19
+}
+
+randomTextures = []
+
+location = ''
+
+var textures = {};
+
+for(material in assets){
+  for(i=1;i<=assets[material];i++){
+
+  }
+}
+
 const app = new PIXI.Application({
   width: 800, height: 600, backgroundColor: 0x1099bb, resolution: window.devicePixelRatio || 1,
 });
@@ -20,6 +63,7 @@ for (let i = 0; i < 1; i++) {
   bunny.y = Math.floor(i / 5) * 40;
   container.addChild(bunny);
 }
+
 acc = 0.6;
 speed = -20;
 
