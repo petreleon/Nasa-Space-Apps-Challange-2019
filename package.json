@@ -1,0 +1,22 @@
+{
+  "name": "nasa-space",
+  "version": "1.0.0",
+  "description": "Nasa Space Apps Challange 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petreleon/Nasa-Space-Apps-Challange-2019.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petreleon/Nasa-Space-Apps-Challange-2019/issues"
+  },
+  "homepage": "https://github.com/petreleon/Nasa-Space-Apps-Challange-2019#readme",
+  "dependencies": {
+    "pixi.js": "^5.1.5"
+  }
+}
