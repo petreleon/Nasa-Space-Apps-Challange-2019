@@ -19,10 +19,10 @@ randomTextures = [];
 textures = {};
 
 for (material in assets) {
-  textures[material]=[];
+  textures[material] = [];
   for (i = 1; i <= assets[material]; i++) {
-    textures[material].push(PIXI.Texture.from(location_ + material + i + '.svg'));
-    randomTextures.push(PIXI.Texture.from(location_ + material + i + '.svg'));
+
+    randomTextures.push(PIXI.Texture.from(location_ + material + i + '.svg', { resolution: 300 }));
   }
 }
 
@@ -35,7 +35,7 @@ arr = [];
 Dragging = false;
 for (let i = 0; i < 10; i++) {
   arr.push(createBunny(
-    Math.floor(Math.random() * (app.screen.width-200)),
+    Math.floor(Math.random() * app.screen.width),
     Math.floor(Math.random() * app.screen.height),
   ));
 }
