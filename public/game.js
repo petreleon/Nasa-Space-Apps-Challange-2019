@@ -16,8 +16,9 @@ const assets = {
 };
 randomTextures = [];
 
-
-
+boatTexture = PIXI.Texture.from('assets/boat800.png');
+const boat = new PIXI.Sprite(boatTexture);
+boat.x = 600;
 textures = {};
 
 for (material in assets) {
@@ -32,7 +33,7 @@ categories = Object.entries(assets);
 
 const app = new PIXI.Application({ backgroundColor: 0x113d4c, height:800 });
 document.body.appendChild(app.view);
-
+app.stage.addChild(boat)
 const graphics = new PIXI.Graphics();
 
 graphics.beginFill(0xDE3249);
@@ -67,27 +68,27 @@ const metalText = new PIXI.Text('metal');
 metalText.x = 620;
 metalText.y = 700;
 
-graphics.beginFill(0x20fc03);
+graphics.beginFill(0x20fc03, 0.4);
 graphics.drawRect(600, 150, 200, 100);
 graphics.endFill();
 
-graphics.beginFill(0xDE3249);
+graphics.beginFill(0xDE3249, 0.4);
 graphics.drawRect(600, 250, 200, 100);
 graphics.endFill();
 
-graphics.beginFill(0x20fc03);
+graphics.beginFill(0x20fc03, 0.4);
 graphics.drawRect(600, 350, 200, 100);
 graphics.endFill();
 
-graphics.beginFill(0xDE3249);
+graphics.beginFill(0xDE3249, 0.4);
 graphics.drawRect(600, 450, 200, 100);
 graphics.endFill();
 
-graphics.beginFill(0x20fc03);
+graphics.beginFill(0x20fc03, 0.4);
 graphics.drawRect(600, 550, 200, 100);
 graphics.endFill();
 
-graphics.beginFill(0xDE3249);
+graphics.beginFill(0xDE3249, 0.4);
 graphics.drawRect(600, 650, 200, 100);
 graphics.endFill();
 
