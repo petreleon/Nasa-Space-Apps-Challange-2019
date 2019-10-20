@@ -31,7 +31,7 @@ for (material in assets) {
 
 categories = Object.entries(assets);
 
-const app = new PIXI.Application({ backgroundColor: 0x113d4c, height:800 });
+const app = new PIXI.Application({ backgroundColor: 0x113d4c, height: 800 });
 document.body.appendChild(app.view);
 app.stage.addChild(boat)
 const graphics = new PIXI.Graphics();
@@ -54,7 +54,7 @@ const refuseText = new PIXI.Text('refuse', style);
 refuseText.x = 620;
 refuseText.y = 100;
 
-const paperText = new PIXI.Text('organic', style);
+const paperText = new PIXI.Text('paper', style);
 paperText.x = 620;
 paperText.y = 200;
 
@@ -191,61 +191,61 @@ function onDragEnd() {
   //const newPosition = this.data.getLocalPosition(this.parent);
   //refuse
   if (this.x >= 600 && this.x < 800 && this.y >= 50 && this.y < 150) {
-    if (['refuse', 'styrofoam', 'ruinedpaper'].includes(this.category)) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+    if (['refuse', 'styrofoam', 'ruinedpaper'].includes(this.category))
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //paper
   if (this.x >= 600 && this.x < 800 && this.y >= 150 && this.y < 250) {
     if (
-    ['paper', 'coffecup'].includes(this.category)
-    ) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+      ['paper', 'coffecup'].includes(this.category)
+    )
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //plastic
   if (this.x >= 600 && this.x < 800 && this.y >= 250 && this.y < 350) {
     if (['plastic', 'plasticbag'].includes(this.category)
-      ) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+    )
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //organics
   if (this.x >= 600 && this.x < 800 && this.y >= 350 && this.y < 450) {
-    if (['organics'].includes(this.category)) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+    if (['organics'].includes(this.category))
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //glass
   if (this.x >= 600 && this.x < 800 && this.y >= 450 && this.y < 550) {
-    if (['glass'].includes(this.category)) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+    if (['glass'].includes(this.category))
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //tetrapack
   if (this.x >= 600 && this.x < 800 && this.y >= 550 && this.y < 650) {
-    if (['tetrapack'].includes(this.category)) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+    if (['tetrapack'].includes(this.category))
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //metal
   if (this.x >= 600 && this.x < 800 && this.y >= 650 && this.y < 750) {
-    if (['aluminum', 'tin'].includes(this.category)) 
-scoreText.text = (parseInt(scoreText.text)+1).toString();
-    else 
-scoreText.text = (parseInt(scoreText.text)-1).toString();
+    if (['aluminum', 'tin'].includes(this.category))
+      scoreText.text = (parseInt(scoreText.text) + 1).toString();
+    else
+      scoreText.text = (parseInt(scoreText.text) - 1).toString();
     this.x = 900;
   }
   //console.log(graphics.containsPoint(newPosition.x, newPosition.y));
